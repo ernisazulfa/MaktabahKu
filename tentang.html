@@ -13,46 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            transition: background-image 1.5s ease-in-out;
-        }
-
-        .font-arab { font-family: 'Amiri', serif; }
-
-        .glass-header {
-            background: rgba(6, 78, 59, 0.75);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(251, 191, 36, 0.3);
-        }
-
-        .glass-card-blend {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(6, 30, 22, 0.9));
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(217, 119, 6, 0.4);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
-        }
-
-        .btn-3d {
-            background: linear-gradient(180deg, #d97706, #b45309);
-            box-shadow: 0 4px 0 #78350f, 0 8px 15px rgba(0,0,0,0.5);
-            transition: all 0.15s ease;
-        }
-        .btn-3d:hover {
-            background: linear-gradient(180deg, #f59e0b, #d97706);
-            transform: translateY(-2px);
-        }
-        .btn-3d:active {
-            background: linear-gradient(180deg, #78350f, #451a03) !important;
-            transform: translateY(2px) !important;
-            filter: brightness(0.7);
-        }
-    </style>
+    <!-- External CSS Terpusat -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="pageBody" class="text-slate-100 min-h-screen flex flex-col relative bg-slate-950">
 
@@ -62,8 +24,6 @@
     <!-- STICKY TOP NAVBAR -->
     <header class="glass-header sticky top-0 z-50 px-6 py-3 transition-all">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-
-            <!-- LOGO & JUDUL -->
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg border border-amber-200/50">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -76,7 +36,6 @@
                 </div>
             </div>
 
-            <!-- MENU NAVIGASI UTAMA (SERAGAM & GARIS KUNING PAS DI TENTANG) -->
             <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
                 <a href="index.html" class="text-slate-200 hover:text-amber-300 transition">Beranda</a>
                 <a href="tentang.html" class="text-amber-300 transition border-b-2 border-amber-400 pb-1">Tentang</a>
@@ -84,18 +43,14 @@
                 <a href="direktori.html" class="text-slate-200 hover:text-amber-300 transition">Koleksi Kitab</a>
             </nav>
 
-            <!-- KANAN: TOMBOL KELUAR -->
             <div class="flex items-center space-x-3">
-                <a href="index.html" class="bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 px-3 py-1.5 rounded-xl text-xs font-bold transition">
-                    Dashboard
-                </a>
+                <a href="index.html" class="bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 px-3 py-1.5 rounded-xl text-xs font-bold transition">Dashboard</a>
                 <a href="login.html" class="bg-red-950/80 hover:bg-red-900 text-red-200 border border-red-500/40 p-2 rounded-xl text-xs transition shadow flex items-center justify-center" title="Keluar">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                     </svg>
                 </a>
             </div>
-
         </div>
     </header>
 
@@ -141,7 +96,7 @@
             </div>
         </div>
 
-        <!-- SECTION 3: PROFIL PENGEMBANG & TOMBOL 3D MENUJU KOLEKSI KITAB -->
+        <!-- SECTION 3: PROFIL PENGEMBANG & TOMBOL MENUJU KOLEKSI KITAB -->
         <div class="glass-card-blend p-8 rounded-3xl space-y-4 text-center">
             <span class="text-xs uppercase font-bold text-amber-400 tracking-wider">Tim Pengembang</span>
             <h3 class="text-xl font-bold text-slate-100">Dikembangkan untuk Pesantren & Akademik</h3>
