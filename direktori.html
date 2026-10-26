@@ -5,18 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MaktabahKu - Direktori Lengkap Kitab Kuning Berdasarkan Fan</title>
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- External CSS Terpusat -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="pageBody" class="text-slate-100 min-h-screen flex flex-col relative bg-slate-950">
 
+    <!-- OVERLAY GELAP -->
     <div class="fixed inset-0 bg-slate-950/70 z-0"></div>
 
+    <!-- STICKY TOP NAVBAR -->
     <header class="glass-header sticky top-0 z-50 px-6 py-3 transition-all">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            
+            <!-- LOGO & JUDUL -->
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg border border-amber-200/50">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -29,6 +38,7 @@
                 </div>
             </div>
 
+            <!-- MENU NAVIGASI UTAMA -->
             <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
                 <a href="index.html" class="text-slate-200 hover:text-amber-300 transition">Beranda</a>
                 <a href="tentang.html" class="text-slate-200 hover:text-amber-300 transition">Tentang</a>
@@ -36,18 +46,25 @@
                 <a href="direktori.html" class="text-amber-300 transition border-b-2 border-amber-400 pb-1">Koleksi Kitab</a>
             </nav>
 
+            <!-- KANAN: TOMBOL DASHBOARD & LOGOUT -->
             <div class="flex items-center space-x-3">
-                <a href="index.html" class="bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center space-x-1">Dashboard</a>
-                <a href="login.html" class="bg-red-950/80 hover:bg-red-900 text-red-200 border border-red-500/40 p-2 rounded-xl text-xs transition shadow flex items-center justify-center" title="Keluar">
+                <a href="index.html" class="bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center space-x-1">
+                    <span>Dashboard</span>
+                </a>
+                <a href="login.html" class="bg-red-950/80 hover:bg-red-900 text-red-200 border border-red-500/40 p-2 rounded-xl text-xs transition shadow flex items-center justify-center" title="Keluar / Logout">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                     </svg>
                 </a>
             </div>
+
         </div>
     </header>
 
+    <!-- KONTEN UTAMA DIREKTORI -->
     <main class="flex-1 p-6 max-w-7xl mx-auto w-full relative z-10 space-y-10 my-6">
+        
+        <!-- HEADER & SEARCH BAR -->
         <div class="glass-card-blend p-6 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
                 <span class="text-xs uppercase font-bold text-amber-400 tracking-wider">Pusat Referensi Lengkap Pesantren</span>
@@ -55,6 +72,7 @@
                 <p class="text-xs text-slate-300 mt-1">Klik tombol 'Buka Kitab' untuk langsung mencari referensi kitab di Google.</p>
             </div>
             
+            <!-- SEARCH BAR -->
             <div class="w-full md:w-72">
                 <div class="relative">
                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-amber-400">
@@ -67,12 +85,15 @@
             </div>
         </div>
 
+        <!-- CONTAINER 10 FAN ILMU -->
         <div id="fanContainer" class="space-y-12">
+
             <!-- FAN 1: FIQIH -->
             <div class="fan-section space-y-4">
                 <div class="flex items-center space-x-3 border-b border-amber-500/30 pb-2">
                     <span class="w-3 h-3 rounded-full bg-amber-400 shadow"></span>
                     <h3 class="text-lg font-bold text-amber-300 tracking-wide">1. Fan Fiqih (Hukum Islam & Muamalah)</h3>
+                    <span class="text-xs font-arab text-amber-200/70">فقه العبادات والمعاملات</span>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="mabadi al-fiqhiyyah umar abdul jabbar">
@@ -80,10 +101,13 @@
                             <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30">Fiqih Dasar</span>
                             <h4 class="text-base font-bold text-slate-100 mt-2">Mabadi' Al-Fiqhiyyah (Juz 1-4)</h4>
                             <p class="text-xs text-slate-400 mt-0.5">Umar Abdul Jabbar</p>
+                            <p class="text-xs text-slate-300 mt-2">Dasar fiqih bertingkat untuk santri pemula.</p>
                         </div>
                         <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
                             <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
-                            <a href="https://www.google.com/search?q=mabadi+al+fiqhiyyah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950">Buka Kitab</a>
+                            <a href="https://www.google.com/search?q=mabadi+al+fiqhiyyah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
                         </div>
                     </div>
                     <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="safinatun najah salim bin sumair">
@@ -91,10 +115,55 @@
                             <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30">Fiqih Dasar</span>
                             <h4 class="text-base font-bold text-slate-100 mt-2">Matan Safinatun Najah</h4>
                             <p class="text-xs text-slate-400 mt-0.5">Syekh Salim bin Sumair Al-Hadhrami</p>
+                            <p class="text-xs text-slate-300 mt-2">Dasar ibadah shalat dan thaharah.</p>
                         </div>
                         <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
                             <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
-                            <a href="https://www.google.com/search?q=matan+safinatun+najah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950">Buka Kitab</a>
+                            <a href="https://www.google.com/search?q=matan+safinatun+najah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="kasyifatus saja nawawi al-bantani">
+                        <div>
+                            <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30">Syarah Safinah</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Kasyifatus Saja</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Nawawi Al-Bantani</p>
+                            <p class="text-xs text-slate-300 mt-2">Syarah mendalam atas Safinatun Najah.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=kasyifatus+saja" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="bahjatul wasail nawawi al-bantani">
+                        <div>
+                            <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30">Fiqih & Aqidah</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Bahjatul Wasail</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Nawawi Al-Bantani</p>
+                            <p class="text-xs text-slate-300 mt-2">Fiqih dan aqidah ringkas sehari-hari.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=bahjatul+wasail" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="matan taqrib abu syuja">
+                        <div>
+                            <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30">Fiqih Madzhab</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Matan Taqrib / Ghayah wa Taqrib</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Qadhi Abu Syuja'</p>
+                            <p class="text-xs text-slate-300 mt-2">Kitab ringkas fiqih madzhab Syafi'i.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=matan+taqrib" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
                         </div>
                     </div>
                     <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="fathul qarib ibnu qasim al-ghazi">
@@ -102,20 +171,175 @@
                             <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30">Fiqih Menengah</span>
                             <h4 class="text-base font-bold text-slate-100 mt-2">Fathul Qarib Al-Mujib</h4>
                             <p class="text-xs text-slate-400 mt-0.5">Ibnu Qasim Al-Ghazi</p>
+                            <p class="text-xs text-slate-300 mt-2">Syarah Matan Taqrib yang sangat populer.</p>
                         </div>
                         <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
                             <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
-                            <a href="https://www.google.com/search?q=fathul+qarib" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950">Buka Kitab</a>
+                            <a href="https://www.google.com/search?q=fathul+qarib" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="hasyiyah al-bajuri ibrahim al-bajuri">
+                        <div>
+                            <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30">Hasyiyah Fiqih</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Hasyiyah Al-Bajuri (Juz 1-2)</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Ibrahim Al-Bajuri</p>
+                            <p class="text-xs text-slate-300 mt-2">Catatan kaki komprehensif atas Fathul Qarib.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=hasyiyah+al+bajuri" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="at-taqrirot as-sadidah hasan ahmad al-kaff">
+                        <div>
+                            <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30">Fiqih Kontemporer</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">At-Taqrirot As-Sadidah</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Habib Hasan bin Ahmad Al-Kaff</p>
+                            <p class="text-xs text-slate-300 mt-2">Fiqih ibadah & muamalah madzhab Syafi'i modern.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=at+taqrirot+as+sadidah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="fathul mu'in zainuddin al-malibari">
+                        <div>
+                            <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30">Fiqih Lanjutan</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Fathul Mu'in</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Zainuddin Al-Malibari</p>
+                            <p class="text-xs text-slate-300 mt-2">Rujukan fiqih tingkat lanjut di pesantren.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=fathul+muin" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="ianatut thalibin sayyid bakri syatha">
+                        <div>
+                            <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30">Syarah Fathul Mu'in</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">I'anatut Thalibin (Juz 1-4)</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Sayyid Bakri Syatha</p>
+                            <p class="text-xs text-slate-300 mt-2">Ensiklopedia fiqih madzhab Syafi'i.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=ianatut+thalibin" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="al-mahalli kanzur raghibin jalaluddin al-mahalli">
+                        <div>
+                            <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30">Fiqih Tingkat Tinggi</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Al-Mahalli / Kanzur Raghibin</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Jalaluddin Al-Mahalli</p>
+                            <p class="text-xs text-slate-300 mt-2">Syarah Minhajuth Thalibin karya Imam Nawawi.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=kitab+kanzur+raghibin+al+mahalli" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="bidayatul mujtahid ibnu rusyd">
+                        <div>
+                            <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30">Fiqih Perbandingan</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Bidayatul Mujtahid</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Ibnu Rusyd</p>
+                            <p class="text-xs text-slate-300 mt-2">Studi perbandingan madzhab dalam fiqih.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=bidayatul+mujtahid" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- FAN 3: NAHWU & SHOROF -->
+            <!-- FAN 2: USHUL FIQIH -->
+            <div class="fan-section space-y-4">
+                <div class="flex items-center space-x-3 border-b border-indigo-500/30 pb-2">
+                    <span class="w-3 h-3 rounded-full bg-indigo-400 shadow"></span>
+                    <h3 class="text-lg font-bold text-indigo-300 tracking-wide">2. Fan Usul Fiqih & Qawa'id Fiqhiyyah</h3>
+                    <span class="text-xs font-arab text-indigo-200/70">أصول الفقه والقواعد الفقهية</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="matan al-waraqat imam al-juwaini">
+                        <div>
+                            <span class="bg-indigo-500/20 text-indigo-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-indigo-500/30">Usul Fiqih Dasar</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Matan Al-Waraqat</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Imam Al-Juwaini</p>
+                            <p class="text-xs text-slate-300 mt-2">Dasar kaidah penetapan hukum Islam.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=matan+al+waraqat" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="lathaiful isyarat abdul hamid kudus">
+                        <div>
+                            <span class="bg-indigo-500/20 text-indigo-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-indigo-500/30">Syarah Waraqat</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Lathaiful Isyarat</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Abdul Hamid Kudus</p>
+                            <p class="text-xs text-slate-300 mt-2">Penjelasan atas kitab Al-Waraqat.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=lathaiful+isyarat" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="mabadi awaliyyah abdul hamid hakim">
+                        <div>
+                            <span class="bg-indigo-500/20 text-indigo-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-indigo-500/30">Usul Fiqih Menengah</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Mabadi Awaliyyah</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Abdul Hamid Hakim</p>
+                            <p class="text-xs text-slate-300 mt-2">Pengantar usul fiqih untuk madrasah.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=mabadi+awaliyyah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="asy-asybah wan nazhair imam as-suyuthi">
+                        <div>
+                            <span class="bg-indigo-500/20 text-indigo-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-indigo-500/30">Kaidah Fiqhiyah</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Asy-Asybah wan Nazhair</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Imam As-Suyuthi</p>
+                            <p class="text-xs text-slate-300 mt-2">Kaidah dan analogi hukum Islam.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=al+asybah+wan+nazhair" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAN 3: NAHWU, SHOROF, & I'RAB -->
             <div class="fan-section space-y-4">
                 <div class="flex items-center space-x-3 border-b border-blue-500/30 pb-2">
                     <span class="w-3 h-3 rounded-full bg-blue-400 shadow"></span>
-                    <h3 class="text-lg font-bold text-blue-300 tracking-wide">3. Fan Nahwu, Shorof, & I'rab</h3>
+                    <h3 class="text-lg font-bold text-blue-300 tracking-wide">3. Fan Nahwu, Shorof, & I'rab (Gramatika Arab)</h3>
+                    <span class="text-xs font-arab text-blue-200/70">النحو والصرف والإعراب</span>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="matan al-ajrumiyyah ibnu ajurrum">
@@ -123,43 +347,721 @@
                             <span class="bg-blue-500/20 text-blue-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-500/30">Nahwu Dasar</span>
                             <h4 class="text-base font-bold text-slate-100 mt-2">Matan Al-Ajrumiyyah</h4>
                             <p class="text-xs text-slate-400 mt-0.5">Ibnu Ajurrum</p>
+                            <p class="text-xs text-slate-300 mt-2">Dasar ilmu tata bahasa Arab.</p>
                         </div>
                         <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
                             <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
-                            <a href="https://www.google.com/search?q=matan+al+jurumiyyah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950">Buka Kitab</a>
+                            <a href="https://www.google.com/search?q=matan+al+jurumiyyah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
                         </div>
                     </div>
-                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="amtsilah tashrifiyyah kh ma'shum ali">
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="matan ash-shabrowi abdullah ash-shabrowi">
+                        <div>
+                            <span class="bg-blue-500/20 text-blue-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-500/30">Nazham Nahwu</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Matan Ash-Shabrowi</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Abdullah Ash-Shabrowi</p>
+                            <p class="text-xs text-slate-300 mt-2">Nahwu dasar bentuk nazham dan natsar.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=matan+ash+shabrowi" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="mukhtashor jiddan ahmad zaini dahlan">
+                        <div>
+                            <span class="bg-blue-500/20 text-blue-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-500/30">Syarah Ajrumiyyah</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Mukhtashor Jiddan</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Ahmad Zaini Dahlan</p>
+                            <p class="text-xs text-slate-300 mt-2">Penjelasan ringkas atas Ajrumiyyah.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=mukhtashor+jiddan" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="matan amtsilah tashrifiyyah kh ma'shum ali">
                         <div>
                             <span class="bg-blue-500/20 text-blue-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-500/30">Shorof Praktis</span>
                             <h4 class="text-base font-bold text-slate-100 mt-2">Matan Amtsilah Tashrifiyyah</h4>
                             <p class="text-xs text-slate-400 mt-0.5">KH. Ma'shum Ali</p>
+                            <p class="text-xs text-slate-300 mt-2">Kitab wajib hafalan perubahan kata shorof.</p>
                         </div>
                         <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
                             <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
-                            <a href="https://www.google.com/search?q=amtsilah+tashrifiyyah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950">Buka Kitab</a>
+                            <a href="https://www.google.com/search?q=amtsilah+tashrifiyyah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
                         </div>
                     </div>
-                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="alfiyah ibnu malik">
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="kailani al-izi izuddin al-zanjani">
+                        <div>
+                            <span class="bg-blue-500/20 text-blue-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-500/30">Shorof Menengah</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Kailani / Al-Izi</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Izuddin Al-Zanjani</p>
+                            <p class="text-xs text-slate-300 mt-2">Kaidah morfologi wazan fi'il.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=kitab+kailani" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="qawa'idul i'rab ibnu hisyam a yasin asymuni">
+                        <div>
+                            <span class="bg-blue-500/20 text-blue-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-500/30">I'rab Kalimat</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Qawa'idul I'rab</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Ibnu Hisyam / KH. A. Yasin Asymuni</p>
+                            <p class="text-xs text-slate-300 mt-2">Analisis kedudukan dan harkat akhir kata.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=qawaidul+irab" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="qawa'idul i'lal perubahan huruf illat">
+                        <div>
+                            <span class="bg-blue-500/20 text-blue-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-500/30">Kaidah I'lal</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Kitab Qawa'idul I'lal</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Klasik Pesantren</p>
+                            <p class="text-xs text-slate-300 mt-2">Kaidah perubahan huruf illat dalam shorof.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=qawaidul+ilal" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="nazham imrithi syarafuddin al-imrithi">
+                        <div>
+                            <span class="bg-blue-500/20 text-blue-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-500/30">Nazham Nahwu</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Nazham Imrithi</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syarafuddin Al-Imrithi</p>
+                            <p class="text-xs text-slate-300 mt-2">Kitab syair tata bahasa Arab menengah.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=nazham+imrithi" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="mutammimah al-ajrumiyyah syamsuddin ar-ra'ini">
+                        <div>
+                            <span class="bg-blue-500/20 text-blue-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-500/30">Nahwu Lanjutan</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Mutammimah Al-Ajrumiyyah</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syamsuddin Ar-Ra'ini</p>
+                            <p class="text-xs text-slate-300 mt-2">Penyempurna materi dasar Ajrumiyyah.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=mutammimah+al+ajrumiyyah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="alfiyah ibnu malik qadhi ibnu malik">
                         <div>
                             <span class="bg-blue-500/20 text-blue-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-500/30">Gramatika Tertinggi</span>
                             <h4 class="text-base font-bold text-slate-100 mt-2">Alfiyah Ibnu Malik</h4>
                             <p class="text-xs text-slate-400 mt-0.5">Qadhi Ibnu Malik</p>
+                            <p class="text-xs text-slate-300 mt-2">1000 bait syair rujukan utama ilmu nahwu shorof.</p>
                         </div>
                         <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
                             <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
-                            <a href="https://www.google.com/search?q=alfiyah+ibnu+malik" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950">Buka Kitab</a>
+                            <a href="https://www.google.com/search?q=alfiyah+ibnu+malik" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="syarah ibnu 'aqil ala alfiyah ibnu 'aqil">
+                        <div>
+                            <span class="bg-blue-500/20 text-blue-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-blue-500/30">Syarah Alfiyah</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Syarah Ibnu 'Aqil</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Ibnu 'Aqil</p>
+                            <p class="text-xs text-slate-300 mt-2">Syarah standar bait-bait Alfiyah Ibnu Malik.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=syarah+ibnu+aqil" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- FAN 4: TAJWID & QIRA'AT -->
+            <div class="fan-section space-y-4">
+                <div class="flex items-center space-x-3 border-b border-teal-500/30 pb-2">
+                    <span class="w-3 h-3 rounded-full bg-teal-400 shadow"></span>
+                    <h3 class="text-lg font-bold text-teal-300 tracking-wide">4. Fan Tajwid & Qira'at (Kaidah Membaca Al-Qur'an)</h3>
+                    <span class="text-xs font-arab text-teal-200/70">التجويد والقراءات</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="hidayatus shibyan sa'id bin sa'ad nabhan">
+                        <div>
+                            <span class="bg-teal-500/20 text-teal-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-teal-500/30">Tajwid Dasar</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Hidayatus Shibyan</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Sa'id bin Sa'ad Nabhan</p>
+                            <p class="text-xs text-slate-300 mt-2">Panduan dasar ilmu tajwid untuk pemula.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=hidayatus+shibyan" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="syifa'ul jinan ahmad muthohar asy'ari">
+                        <div>
+                            <span class="bg-teal-500/20 text-teal-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-teal-500/30">Tajwid Pesantren</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Syifa'ul Jinan fi Tajwidil Qur'an</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">KH. Ahmad Muthohar / KH. Asy'ari</p>
+                            <p class="text-xs text-slate-300 mt-2">Nazham tajwid khas pesantren Nusantara.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=syifaul+jinan+tajwid" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="matan al-jazariyyah imam ibnul jazari">
+                        <div>
+                            <span class="bg-teal-500/20 text-teal-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-teal-500/30">Tajwid Menengah</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Matan Al-Jazariyyah</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Imam Ibnul Jazari</p>
+                            <p class="text-xs text-slate-300 mt-2">Kaidah mahraj dan sifat huruf Al-Qur'an.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=matan+al+jazariyyah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAN 5: AQIDAH & TAUHID -->
+            <div class="fan-section space-y-4">
+                <div class="flex items-center space-x-3 border-b border-rose-500/30 pb-2">
+                    <span class="w-3 h-3 rounded-full bg-rose-400 shadow"></span>
+                    <h3 class="text-lg font-bold text-rose-300 tracking-wide">5. Fan Aqidah & Tauhid</h3>
+                    <span class="text-xs font-arab text-rose-200/70">العقيدة والتوحيد</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="aqidatul awam ahmad al-marzuki">
+                        <div>
+                            <span class="bg-rose-500/20 text-rose-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-rose-500/30">Tauhid Dasar</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Aqidatul Awam</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Ahmad Al-Marzuki</p>
+                            <p class="text-xs text-slate-300 mt-2">Sifat wajib dan jaiz Allah & Rasul dalam nazham.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=aqidatul+awam" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="tijan ad-darari nawawi al-bantani">
+                        <div>
+                            <span class="bg-rose-500/20 text-rose-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-rose-500/30">Tauhid Menengah</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Tijan Ad-Darari</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Nawawi Al-Bantani</p>
+                            <p class="text-xs text-slate-300 mt-2">Syarah Aqidatul Awam.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=tijan+ad+darari" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="kifayatul awam muhammad al-fudali">
+                        <div>
+                            <span class="bg-rose-500/20 text-rose-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-rose-500/30">Tauhid Lanjutan</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Kifayatul Awam</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Muhammad Al-Fudali</p>
+                            <p class="text-xs text-slate-300 mt-2">Kajian mendalam sifat 20 Allah SWT.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=kifayatul+awam" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="ummul barahin sanusiyyah imam al-sanusi">
+                        <div>
+                            <span class="bg-rose-500/20 text-rose-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-rose-500/30">Aqidah Sanusiyah</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Ummul Barahin (Sanusiyyah)</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Imam Al-Sanusi</p>
+                            <p class="text-xs text-slate-300 mt-2">Argumen logis ketuhanan.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=ummul+barahin" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="jauharatut tauhid ibrahim al-laqqani">
+                        <div>
+                            <span class="bg-rose-500/20 text-rose-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-rose-500/30">Nazham Tauhid</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Jauharatut Tauhid</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Ibrahim Al-Laqqani</p>
+                            <p class="text-xs text-slate-300 mt-2">Kitab syair tauhid tingkat tinggi.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=jauharatut+tauhid" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAN 6: TASAWUF, AKHLAK, & MUNAKAHAT -->
+            <div class="fan-section space-y-4">
+                <div class="flex items-center space-x-3 border-b border-emerald-500/30 pb-2">
+                    <span class="w-3 h-3 rounded-full bg-emerald-400 shadow"></span>
+                    <h3 class="text-lg font-bold text-emerald-300 tracking-wide">6. Fan Tasawuf, Akhlaq, & Rumah Tangga (Munakahat)</h3>
+                    <span class="text-xs font-arab text-emerald-200/70">التصوف والأخلاق والأسرة</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="kitab al-alaala az-zarnuji">
+                        <div>
+                            <span class="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/30">Akhlak Belajar</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Kitab Al-Alaala (La Yanalul Ilma)</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Az-Zarnuji</p>
+                            <p class="text-xs text-slate-300 mt-2">Syair syarat sukses menuntut ilmu.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=kitab+al+alaala" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="washoya al-abaa' lil abnaa' muhammad syakir">
+                        <div>
+                            <span class="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/30">Nasihat Orang Tua</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Washoya Al-Abaa' lil Abnaa'</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Muhammad Syakir</p>
+                            <p class="text-xs text-slate-300 mt-2">Nasihat ayah kepada anaknya.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=washoya+al+abaa+lil+abnaa" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="taisirul khalaq hafizh hasan al-mas'udi">
+                        <div>
+                            <span class="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/30">Akhlak Dasar</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Taisirul Khalaq</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Hafizh Hasan Al-Mas'udi</p>
+                            <p class="text-xs text-slate-300 mt-2">Pendidikan akhlak mulia santri.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=taisirul+khalaq" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="ta'limul muta'allim syekh az-zarnuji">
+                        <div>
+                            <span class="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/30">Etika Belajar</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Ta'limul Muta'allim</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Az-Zarnuji</p>
+                            <p class="text-xs text-slate-300 mt-2">Metode dan adab menuntut ilmu.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=talim+mutaallim" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="bidayatul hidayah imam al-ghazali">
+                        <div>
+                            <span class="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/30">Tasawuf Amali</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Bidayatul Hidayah</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Imam Al-Ghazali</p>
+                            <p class="text-xs text-slate-300 mt-2">Panduan praktis ibadah dan akhlak harian.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=bidayatul+hidayah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="uqudul uyun abu muhammad al-bantani">
+                        <div>
+                            <span class="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/30">Munakahat</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Uqudul Uyun</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Abu Muhammad Al-Bantani</p>
+                            <p class="text-xs text-slate-300 mt-2">Etika pernikahan dan rumah tangga.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=uqudul+uyun" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="irsyadus zoujain hasyim asy'ari ihsan jampes">
+                        <div>
+                            <span class="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/30">Rumah Tangga</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Irsyadus Zaujain</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">KH. M. Hasyim Asy'ari / KH. Ihsan Jampes</p>
+                            <p class="text-xs text-slate-300 mt-2">Keharmonisan suami istri.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=irsyadus+zaujain" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="sullamut taufiq abdullah bin husain">
+                        <div>
+                            <span class="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/30">Tasawuf Fiqih</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Sullamut Taufiq</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Abdullah bin Husain bin Thahir</p>
+                            <p class="text-xs text-slate-300 mt-2">Kewajiban taat kepada Allah SWT.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=sullamut+taufiq" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="ihya 'ulumuddin imam al-ghazali">
+                        <div>
+                            <span class="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/30">Tasawuf Tertinggi</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Ihya 'Ulumuddin</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Imam Al-Ghazali</p>
+                            <p class="text-xs text-slate-300 mt-2">Mahakarya tasawuf penghidupan ilmu agama.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=ihya+ulumuddin" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="al-hikam ibnu atha'illah assakandari">
+                        <div>
+                            <span class="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/30">Hikmah & Tasawuf</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Al-Hikam</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Ibnu Atha'illah Assakandari</p>
+                            <p class="text-xs text-slate-300 mt-2">Kata-kata mutiara pembersihan hati.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=al+hikam" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAN 7: HADITS & MUSTHALAH -->
+            <div class="fan-section space-y-4">
+                <div class="flex items-center space-x-3 border-b border-purple-500/30 pb-2">
+                    <span class="w-3 h-3 rounded-full bg-purple-400 shadow"></span>
+                    <h3 class="text-lg font-bold text-purple-300 tracking-wide">7. Fan Hadits & Musthalah Hadits</h3>
+                    <span class="text-xs font-arab text-purple-200/70">الحديث الشريف ومصطله</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="arba'in an-nawawiyyah imam an-nawawi">
+                        <div>
+                            <span class="bg-purple-500/20 text-purple-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-purple-500/30">Hadits Dasar</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Arba'in An-Nawawiyyah</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Imam An-Nawawi</p>
+                            <p class="text-xs text-slate-300 mt-2">42 hadits fondasi ajaran Islam.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=arbain+nawawi" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="al-bayquniyyah umar bin muhammad al-bayquni">
+                        <div>
+                            <span class="bg-purple-500/20 text-purple-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-purple-500/30">Musthalah Hadits</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Al-Bayquniyyah</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Umar bin Muhammad Al-Bayquni</p>
+                            <p class="text-xs text-slate-300 mt-2">Nazham ilmu riwayat dan dirayah hadits.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=matan+al+bayquniyyah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="bulughul maram ibnu hajar al-asqalani">
+                        <div>
+                            <span class="bg-purple-500/20 text-purple-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-purple-500/30">Hadits Fiqih</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Bulughul Maram</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Ibnu Hajar Al-Asqalani</p>
+                            <p class="text-xs text-slate-300 mt-2">Himpunan hadits hukum ibadah.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=bulughul+maram" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="riyadhus shalihin imam an-nawawi">
+                        <div>
+                            <span class="bg-purple-500/20 text-purple-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-purple-500/30">Hadits Akhlak</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Riyadhus Shalihin</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Imam An-Nawawi</p>
+                            <p class="text-xs text-slate-300 mt-2">Hadits pilihan pembentuk jiwa.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=riyadhus+shalihin" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="shahih bukhari shahih muslim">
+                        <div>
+                            <span class="bg-purple-500/20 text-purple-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-purple-500/30">Kutubus Sittah</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Shahih Bukhari & Shahih Muslim</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Imam Bukhari & Imam Muslim</p>
+                            <p class="text-xs text-slate-300 mt-2">Puncak rujukan hadits shahih.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=shahih+bukhari" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAN 8: TAFSIR & ULUMUL QUR'AN -->
+            <div class="fan-section space-y-4">
+                <div class="flex items-center space-x-3 border-b border-cyan-500/30 pb-2">
+                    <span class="w-3 h-3 rounded-full bg-cyan-400 shadow"></span>
+                    <h3 class="text-lg font-bold text-cyan-300 tracking-wide">8. Fan Tafsir & Ulumul Qur'an</h3>
+                    <span class="text-xs font-arab text-cyan-200/70">التفسير وعلوم القرآن</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="tafsir jalalain jalaluddin al-mahalli as-suyuthi">
+                        <div>
+                            <span class="bg-cyan-500/20 text-cyan-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-cyan-500/30">Tafsir Klasik</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Tafsir Jalalain</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Jalaluddin Al-Mahalli & As-Suyuthi</p>
+                            <p class="text-xs text-slate-300 mt-2">Tafsir rujukan utama di pesantren.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=tafsir+jalalain" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="tafsir ibnu katsir ibnu katsir">
+                        <div>
+                            <span class="bg-cyan-500/20 text-cyan-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-cyan-500/30">Tafsir Bil Ma'tsur</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Tafsir Ibnu Katsir</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Ibnu Katsir</p>
+                            <p class="text-xs text-slate-300 mt-2">Penafsiran Al-Qur'an dengan hadits.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=tafsir+ibnu+katsir" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="tafsir al-ibriz kh bisri mustofa">
+                        <div>
+                            <span class="bg-cyan-500/20 text-cyan-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-cyan-500/30">Tafsir Nusantara</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Tafsir Al-Ibriz</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">KH. Bisri Mustofa</p>
+                            <p class="text-xs text-slate-300 mt-2">Tafsir berbahasa Jawa makna gandul.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=tafsir+al+ibriz" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="tafsir al-munir nawawi al-bantani">
+                        <div>
+                            <span class="bg-cyan-500/20 text-cyan-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-cyan-500/30">Tafsir Marah Labid</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Tafsir Al-Munir (Marah Labid)</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Nawawi Al-Bantani</p>
+                            <p class="text-xs text-slate-300 mt-2">Karya fenomenal ulama nusantara.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=tafsir+marah+labid" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="al-tibyan fi adabi hamalatil qur'an imam an-nawawi">
+                        <div>
+                            <span class="bg-cyan-500/20 text-cyan-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-cyan-500/30">Adab Al-Qur'an</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Al-Tibyan fi Adabi Hamalatil Qur'an</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Imam An-Nawawi</p>
+                            <p class="text-xs text-slate-300 mt-2">Etika penghafal dan pembaca Al-Qur'an.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=al+tibyan+fi+adabi+hamalatil+quran" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAN 9: BALAGHOH & MANTIQ -->
+            <div class="fan-section space-y-4">
+                <div class="flex items-center space-x-3 border-b border-orange-500/30 pb-2">
+                    <span class="w-3 h-3 rounded-full bg-orange-400 shadow"></span>
+                    <h3 class="text-lg font-bold text-orange-300 tracking-wide">9. Fan Balaghoh & Mantiq (Sastra & Logika)</h3>
+                    <span class="text-xs font-arab text-orange-200/70">البلاغة والمنطق</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="al-balaaghatul waadhihah ali al-jarim mustafa amin">
+                        <div>
+                            <span class="bg-orange-500/20 text-orange-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-orange-500/30">Sastra Balaghoh</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Al-Balaaghatul Waadhihah</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Ali Al-Jarim & Mustafa Amin</p>
+                            <p class="text-xs text-slate-300 mt-2">Ilmu bayan, ma'ani, dan badi'.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=al+balaghatul+wadihah" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="jauharul maknun abdurrahman al-akhdari">
+                        <div>
+                            <span class="bg-orange-500/20 text-orange-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-orange-500/30">Nazham Balaghoh</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Jauharul Maknun</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Abdurrahman Al-Akhdari</p>
+                            <p class="text-xs text-slate-300 mt-2">Sastra Arab 142 bait.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=jauharul+maknun" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="sullamul munawraq fi 'ilmil mantiq abdurrahman al-akhdari">
+                        <div>
+                            <span class="bg-orange-500/20 text-orange-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-orange-500/30">Ilmu Mantiq</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Sullamul Munawraq</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Abdurrahman Al-Akhdari</p>
+                            <p class="text-xs text-slate-300 mt-2">Logika berpikir rasional klasik.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=sullamul+munawraq" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAN 10: TARIKH & SIRAH NABAWIYAH -->
+            <div class="fan-section space-y-4">
+                <div class="flex items-center space-x-3 border-b border-rose-600/30 pb-2">
+                    <span class="w-3 h-3 rounded-full bg-rose-500 shadow"></span>
+                    <h3 class="text-lg font-bold text-rose-300 tracking-wide">10. Fan Tarikh & Sirah Nabawiyah</h3>
+                    <span class="text-xs font-arab text-rose-200/70">التاريخ والسيرة النبوية</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="khulashoh nurul yaqin umar abdul jabbar">
+                        <div>
+                            <span class="bg-rose-600/20 text-rose-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-rose-600/30">Sirah Nabawiyah</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Khulashoh Nurul Yaqin (Juz 1-3)</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syekh Umar Abdul Jabbar</p>
+                            <p class="text-xs text-slate-300 mt-2">Sejarah ringkas kehidupan Nabi Muhammad SAW.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=khulashoh+nurul+yaqin" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="ar-rahiq al-makhtum syafiqurrahman al-mubarokfuri">
+                        <div>
+                            <span class="bg-rose-600/20 text-rose-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-rose-600/30">Sirah Kontemporer</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Ar-Rahiq Al-Makhtum</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Syafiqurrahman Al-Mubarokfuri</p>
+                            <p class="text-xs text-slate-300 mt-2">Sirah Nabawiyah pemenang penghargaan internasional.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=ar+rahiq+al+makhtum" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="kitab-card glass-card-blend p-6 rounded-2xl flex flex-col justify-between space-y-4 hover:border-amber-400/80 transition" data-title="al-barzanji simtuddurar maulid nabi">
+                        <div>
+                            <span class="bg-rose-600/20 text-rose-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-rose-600/30">Maulid Nabi</span>
+                            <h4 class="text-base font-bold text-slate-100 mt-2">Al-Barzanji & Simtuddurar</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Ja'far Al-Barzanji & Al-Habib Ali Al-Habsyi</p>
+                            <p class="text-xs text-slate-300 mt-2">Pujian dan sejarah kelahiran Rasulullah SAW.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-[11px] text-emerald-300 font-medium">✓ Akses Google</span>
+                            <a href="https://www.google.com/search?q=simtuddurar" target="_blank" class="btn-3d px-3 py-1.5 rounded-lg text-xs font-bold text-slate-950 flex items-center space-x-1">
+                                <span>Buka Kitab</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
+        <!-- PESAN KETIKA PENCARIAN KOSONG -->
         <div id="noResult" class="hidden text-center py-12 glass-card-blend rounded-2xl">
             <p class="text-slate-400 text-sm">Kitab yang anda cari tidak ditemukan dalam direktori.</p>
         </div>
+
     </main>
 
+    <!-- SCRIPT SLIDESHOW BACKGROUND & FILTER -->
     <script>
         const bgImages = [
             'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=80',
@@ -167,8 +1069,10 @@
             'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=1600&q=80',
             'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80'
         ];
+
         let currentBgIndex = 0;
         const bodyElement = document.getElementById('pageBody');
+
         setInterval(() => {
             currentBgIndex = (currentBgIndex + 1) % bgImages.length;
             bodyElement.style.backgroundImage = `url('${bgImages[currentBgIndex]}')`;
@@ -183,8 +1087,10 @@
             sections.forEach(section => {
                 const cards = section.querySelectorAll('.kitab-card');
                 let sectionHasVisibleCard = false;
+
                 cards.forEach(card => {
                     const searchableText = card.getAttribute('data-title') + ' ' + card.innerText.toLowerCase();
+                    
                     if (searchableText.includes(input)) {
                         card.style.display = "flex";
                         sectionHasVisibleCard = true;
@@ -193,9 +1099,19 @@
                         card.style.display = "none";
                     }
                 });
-                section.style.display = sectionHasVisibleCard ? "block" : "none";
+
+                if (sectionHasVisibleCard) {
+                    section.style.display = "block";
+                } else {
+                    section.style.display = "none";
+                }
             });
-            noResult.classList.toggle('hidden', totalVisibleCards > 0);
+
+            if (totalVisibleCards === 0) {
+                noResult.classList.remove('hidden');
+            } else {
+                noResult.classList.add('hidden');
+            }
         }
     </script>
 </body>
