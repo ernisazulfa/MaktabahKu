@@ -13,57 +13,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            transition: background-image 1.5s ease-in-out;
-        }
-
-        .font-arab { font-family: 'Amiri', serif; }
-
-        .glass-header {
-            background: rgba(6, 78, 59, 0.75);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(251, 191, 36, 0.3);
-        }
-
-        .glass-card-blend {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(6, 30, 22, 0.9));
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(217, 119, 6, 0.4);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
-        }
-
-        .btn-3d {
-            background: linear-gradient(180deg, #d97706, #b45309);
-            box-shadow: 0 4px 0 #78350f, 0 8px 15px rgba(0,0,0,0.5);
-            transition: all 0.15s ease;
-        }
-        .btn-3d:hover {
-            background: linear-gradient(180deg, #f59e0b, #d97706);
-            transform: translateY(-2px);
-        }
-        .btn-3d:active {
-            background: linear-gradient(180deg, #78350f, #451a03) !important;
-            transform: translateY(2px) !important;
-            filter: brightness(0.7);
-        }
-    </style>
+    <!-- External CSS Terpusat -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="pageBody" class="text-slate-100 min-h-screen flex flex-col relative bg-slate-950">
 
-    <!-- OVERLAY GELAP -->
     <div class="fixed inset-0 bg-slate-950/65 z-0"></div>
 
-    <!-- STICKY TOP NAVBAR -->
     <header class="glass-header sticky top-0 z-50 px-6 py-3 transition-all">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-
-            <!-- LOGO & JUDUL -->
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg border border-amber-200/50">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -76,7 +34,6 @@
                 </div>
             </div>
 
-            <!-- MENU NAVIGASI UTAMA (GARIS KUNING PAS DI FITUR UTAMA) -->
             <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
                 <a href="index.html" class="text-slate-200 hover:text-amber-300 transition">Beranda</a>
                 <a href="tentang.html" class="text-slate-200 hover:text-amber-300 transition">Tentang</a>
@@ -84,91 +41,30 @@
                 <a href="direktori.html" class="text-slate-200 hover:text-amber-300 transition">Koleksi Kitab</a>
             </nav>
 
-            <!-- KANAN: TOMBOL DASHBOARD & KELUAR -->
             <div class="flex items-center space-x-3">
-                <a href="index.html" class="bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 px-3 py-1.5 rounded-xl text-xs font-bold transition">
-                    Dashboard
-                </a>
+                <a href="index.html" class="bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 px-3 py-1.5 rounded-xl text-xs font-bold transition">Dashboard</a>
                 <a href="login.html" class="bg-red-950/80 hover:bg-red-900 text-red-200 border border-red-500/40 p-2 rounded-xl text-xs transition shadow flex items-center justify-center" title="Keluar">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                     </svg>
                 </a>
             </div>
-
         </div>
     </header>
 
-    <!-- KONTEN UTAMA FITUR UTAMA -->
     <main class="flex-1 p-6 max-w-7xl mx-auto w-full relative z-10 space-y-8 my-8">
-        
-        <!-- HERO / HEADER -->
         <div class="glass-card-blend p-8 rounded-3xl relative overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="space-y-3">
                 <span class="bg-amber-500/20 text-amber-300 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30">Fasilitas Sistem</span>
                 <h2 class="text-3xl font-extrabold text-amber-200 font-arab">مميزات النظام - Fitur & Layanan Utama</h2>
                 <p class="text-slate-300 text-sm max-w-2xl leading-relaxed">
-                    Dirancang khusus untuk mendukung ustadzah dan pengurus perpustakaan pesantren dalam mengelola literatur klasik secara digital, cepat, dan terorganisir.
+                    Dirancang khusus untuk mendukung ustadzah dan pengurus perpustakaan pesantren dalam mengelola literatur klasik secara digital.
                 </p>
             </div>
-            <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-amber-500/30 to-amber-700/30 border border-amber-400/40 flex items-center justify-center shadow-lg shrink-0">
-                <span class="text-4xl">⚙️</span>
-            </div>
         </div>
 
-        <!-- GRID FITUR UNGGULAN -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            <!-- Fitur 1 -->
-            <div class="glass-card-blend p-6 rounded-2xl space-y-3 hover:border-amber-400/80 transition flex flex-col justify-between">
-                <div>
-                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center font-bold mb-3">📚</div>
-                    <h3 class="text-lg font-bold text-amber-300">Direktori 10 Fan Ilmu</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed mt-2">
-                        Pengelompokan kitab kuning secara lengkap mulai dari Fiqih, Nahwu-Shorof, Tafsir, Hadits, hingga Akhlak untuk memudahkan referensi ajar.
-                    </p>
-                </div>
-                <div class="pt-2 border-t border-slate-800">
-                    <span class="text-[11px] text-emerald-300 font-semibold">✓ Terstruktur & Rapi</span>
-                </div>
-            </div>
-
-            <!-- Fitur 2 -->
-            <div class="glass-card-blend p-6 rounded-2xl space-y-3 hover:border-amber-400/80 transition flex flex-col justify-between">
-                <div>
-                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-bold mb-3">🔄</div>
-                    <h3 class="text-lg font-bold text-emerald-300">Sirkulasi Kitab Fisik</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed mt-2">
-                        Pencatatan sirkulasi peminjaman dan pengembalian kitab santri secara digital guna menghindari kehilangan aset perpustakaan pesantren.
-                    </p>
-                </div>
-                <div class="pt-2 border-t border-slate-800">
-                    <span class="text-[11px] text-emerald-300 font-semibold">✓ Akurat & Transparan</span>
-                </div>
-            </div>
-
-            <!-- Fitur 3 -->
-            <div class="glass-card-blend p-6 rounded-2xl space-y-3 hover:border-amber-400/80 transition flex flex-col justify-between">
-                <div>
-                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center font-bold mb-3">🔍</div>
-                    <h3 class="text-lg font-bold text-amber-300">Pencarian & Akses Google</h3>
-                    <p class="text-xs text-slate-300 leading-relaxed mt-2">
-                        Fitur pencarian instan nama kitab disertai tombol langsung menuju pencarian rujukan Google untuk referensi tambahan pengajar.
-                    </p>
-                </div>
-                <div class="pt-2 border-t border-slate-800">
-                    <span class="text-[11px] text-emerald-300 font-semibold">✓ Cepat & Instant</span>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- TOMBOL AKSI KE KOLEKSI KITAB -->
         <div class="glass-card-blend p-8 rounded-3xl text-center space-y-4">
             <h3 class="text-xl font-bold text-slate-100 font-arab">استكشف الكتب الآن - Mulai Eksplorasi Koleksi Kitab</h3>
-            <p class="text-xs text-slate-300 max-w-lg mx-auto">
-                Temukan berbagai referensi kitab kuning dan bahan ajar yang kamu butuhkan sekarang juga melalui direktori lengkap kami.
-            </p>
             <div class="pt-2">
                 <a href="direktori.html" class="btn-3d inline-flex items-center space-x-2 py-3 px-8 rounded-xl text-xs font-bold text-slate-950 uppercase tracking-wider">
                     <span>Buka Direktori Kitab</span>
@@ -176,10 +72,8 @@
                 </a>
             </div>
         </div>
-
     </main>
 
-    <!-- SCRIPT SLIDESHOW BACKGROUND OTOMATIS -->
     <script>
         const bgImages = [
             'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=80',
@@ -187,16 +81,12 @@
             'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=1600&q=80',
             'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80'
         ];
-
         let currentBgIndex = 0;
         const bodyElement = document.getElementById('pageBody');
-
-        function changeBackground() {
+        setInterval(() => {
             bodyElement.style.backgroundImage = `url('${bgImages[currentBgIndex]}')`;
             currentBgIndex = (currentBgIndex + 1) % bgImages.length;
-        }
-
-        setInterval(changeBackground, 5000);
+        }, 5000);
     </script>
 </body>
 </html>
